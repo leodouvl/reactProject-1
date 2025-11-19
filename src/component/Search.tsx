@@ -15,7 +15,6 @@ export function Search({ onResult }: SearchProps) {
 
   async function search() {
     const result = await tools(`http://omdbapi.com/?apikey=eb198056&s=${name}`);
-    console.log(result.Search);
     onResult(result.Search);
   }
 
