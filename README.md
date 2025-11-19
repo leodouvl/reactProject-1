@@ -1,3 +1,9 @@
+# Installation
+Cloné le projet dans un dossier puis faire :
+cd reactProject-1
+npm install
+npm run dev
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
