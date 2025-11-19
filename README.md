@@ -1,8 +1,10 @@
 # Installation
 Cloné le projet dans un dossier puis faire :
-. cd reactProject-1
-. npm install
-. npm run dev
+cd reactProject-1
+
+npm install
+
+npm run dev
 
 # React + TypeScript + Vite
 
