@@ -1,5 +1,6 @@
 # Installation
 Cloné le projet dans un dossier puis faire :
+
 cd reactProject-1
 
 npm install
