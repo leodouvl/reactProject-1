@@ -1,10 +1,12 @@
 import type { Movie } from "../interface/movie";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export function Favoris() {
   const [movies, setMovies] = useState<Movie[]>([]);
   const stored = localStorage.getItem("favoris");
   const favoris = stored ? JSON.parse(stored) : [];
+  const navigate = useNavigate();
   console.log(favoris);
 
   const handleRemoveFavoris = (result: Movie) => {
@@ -16,6 +18,10 @@ export function Favoris() {
     localStorage.setItem("favoris", JSON.stringify(newFavoris));
     setMovies(newFavoris);
     console.log(movies);
+  };
+
+  const handleDetail = (movie: Movie) => {
+    navigate(`/movie-info/${movie.imdbID}`);
   };
 
   return (
@@ -60,6 +66,7 @@ export function Favoris() {
               >
                 Supprimer des favoris
               </button>
+              <button onClick={() => handleDetail(movie)}>Detail</button>
             </li>
           ))}
         </ul>
